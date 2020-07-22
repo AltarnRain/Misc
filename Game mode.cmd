@@ -15,10 +15,11 @@ taskkill /f /im SynTPEnh.exe
 taskkill /f /im SynTPHelper.exe
 taskkill /f /im "Teams.exe"
 
-@REM taskkill /f /im GoogleCrashHandler.exe
-@REM taskkill /f /im GoogleCrashHandler64.exe
-@REM taskkill /f /im RtkNGUI64.exe
-@REM taskkill /f /im RtkAudioService64.exe
+@REM Don't disable WLAN AutoConfig or Wifi will stop working
+@REM net stop "WLAN AutoConfig"
+
+@REM Don't disable or blue tooth audio devices will not connect
+@REM net stop "Intel Bluetooth Service"
 
 @REM Restarted automatically.
 @REM net stop "NlaSvc"
@@ -27,13 +28,10 @@ taskkill /f /im "Teams.exe"
 @REM net stop "Cryptographic Services"
 @REM net stop "Client License Service (ClipSVC)"
 @REM net stop "Windows License Manager Service"
-@REM Oh well.
-
-@REM Don't disable WLAN AutoConfig or Wifi will stop working
-@REM net stop "WLAN AutoConfig"
-
-@REM Don't disable or blue tooth audio devices will not connect
-@REM net stop "Intel Bluetooth Service"
+@REM net stop "Windows Search"
+@REM net stop "COM+ Event System"
+@REM net stop "Background Intelligent Transfer Service"
+@REM net stop "SSDP Discovery"
 
 @REM Cannot be stopped.
 @REM net stop "Security Center"
@@ -50,7 +48,6 @@ net stop "AVCTP service"
 net stop "AllJoyn Router Service"
 net stop "AppX Deployment Service (AppXSVC)"
 net stop "Application Host Helper Service"
-net stop "Background Intelligent Transfer Service"
 net stop "BitLocker Drive Encryption Service"
 net stop "Bonjour Service"
 net stop "Capability Access Manager Service"
@@ -101,7 +98,6 @@ net stop "SAMSUNG Mobile Connectivity Service"
 net stop "SQLSERVERAGENT"
 net stop "SQLTELEMETRY"
 net stop "SQLWriter"
-net stop "SSDP Discovery"
 net stop "Secure Socket Tunneling Protocol Service"
 net stop "Shell Hardware Detection"
 net stop "Storage Service"
@@ -120,7 +116,6 @@ net stop "Windows Image Acquisition (WIA)"
 net stop "Windows Modules Installer"
 net stop "Windows Presentation Foundation Font Cache 3.0.0.0"
 net stop "Windows Push Notifications System Service"
-net stop "Windows Search"
 net stop "Windows Time"
 net stop "Windows Update"
 net stop "World Wide Web Publishing Service"
@@ -128,7 +123,6 @@ net stop "Xbox Live Auth Manager"
 
 @REM Services where other services depend on.
 net stop "CNG Key Isolation"
-net stop "COM+ Event System"
 net stop "Windows Process Activation Service"
 net stop "Web Account Manager"
 net stop "Function Discovery Provider Host"
