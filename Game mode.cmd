@@ -1,3 +1,5 @@
+:BEGIN
+
 taskkill /f /im greenshot.exe
 taskkill /f /im googledrivesync.exe
 taskkill /f /im TGitCache.exe
@@ -21,6 +23,10 @@ taskkill /f /im "RegSrvc.exe"
 @REM Geolocation Service
 @REM Program Compatibility Assistant Service
 @REM Retail Demo Service
+@REM Windows Error Reporting Service
+
+@REM Set to manual
+@REM Connected User Experiences and Telemetry
 
 @REM Cannot be stopped.
 @REM net stop "Security Center"
@@ -32,6 +38,7 @@ taskkill /f /im "RegSrvc.exe"
 @REM net stop "DCOM Server Process Launcher"
 @REM net stop "Radio Management Service"
 @REM net stop "Storage Service"
+@REM net stop "Remote Desktop Services"
 
 @REM Don't disable WLAN AutoConfig or Wifi will stop working
 @REM net stop "WLAN AutoConfig"
@@ -105,7 +112,6 @@ net stop "Phone Service"
 net stop "Print Spooler"
 net stop "Remote Access Connection Manager"
 net stop "Remote Desktop Configuration"
-net stop "Remote Desktop Services"
 net stop "SAMSUNG Mobile Connectivity Service V2"
 net stop "SAMSUNG Mobile Connectivity Service"
 net stop "SQLSERVERAGENT"
@@ -141,4 +147,7 @@ net stop "Intel(R) PROSet/Wireless Registry"
 @REM Disable Windows Defender. Not stored, will restart on reboot.
 PowerShell Set-MpPreference -DisableRealtimeMonitoring 1
 
-pause
+@REM Ping nonsense address to delay GOTO BEGIN
+ping 0.0.0.0
+
+GOTO BEGIN
