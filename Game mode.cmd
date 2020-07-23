@@ -16,6 +16,12 @@ taskkill /f /im SynTPHelper.exe
 taskkill /f /im "Teams.exe"
 taskkill /f /im "RegSrvc.exe"
 
+@REM Can be disabled safely
+@REM Touch Keyboard and Handwriting Panel Service
+@REM Geolocation Service
+@REM Program Compatibility Assistant Service
+@REM Retail Demo Service
+
 @REM Cannot be stopped.
 @REM net stop "Security Center"
 @REM net stop "Network List Service"
@@ -24,7 +30,6 @@ taskkill /f /im "RegSrvc.exe"
 @REM net stop "DHCP Client"
 @REM net stop "Touch Keyboard and Handwriting Panel Service"
 @REM net stop "DCOM Server Process Launcher"
-@REM net stop "TermService"
 @REM net stop "Radio Management Service"
 @REM net stop "Storage Service"
 
@@ -100,6 +105,7 @@ net stop "Phone Service"
 net stop "Print Spooler"
 net stop "Remote Access Connection Manager"
 net stop "Remote Desktop Configuration"
+net stop "Remote Desktop Services"
 net stop "SAMSUNG Mobile Connectivity Service V2"
 net stop "SAMSUNG Mobile Connectivity Service"
 net stop "SQLSERVERAGENT"
