@@ -63,7 +63,7 @@ net stop "AppX Deployment Service (AppXSVC)"
 net stop "Application Host Helper Service"
 net stop "BitLocker Drive Encryption Service"
 net stop "Bonjour Service"
-net stop "Capability Access Manager Service"
+@REM disabled net stop "Capability Access Manager Service"
 net stop "Certificate Propagation"
 
 @REM EN name
