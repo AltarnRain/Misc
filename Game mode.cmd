@@ -1,7 +1,6 @@
 @REM Laptop.
 taskkill /f /im greenshot.exe
 taskkill /f /im googledrivesync.exe
-taskkill /f /im TGitCache.exe
 taskkill /f /im openvpn-gui.exe
 taskkill /f /im HPMSGSVC.exe
 taskkill /f /im HPRadioMgr64.exe
@@ -44,6 +43,18 @@ net stop "MSI Live Update Service"
 @REM net stop "Background Intelligent Transfer Service"
 @REM net stop "SSDP Discovery"
 @REM net stop "Program Compatibility Assistant Service"
+@REM taskkill /f /im TGitCache.exe
+@REM net stop "AVCTP service"
+@REM net stop "AppX Deployment Service (AppXSVC)"
+@REM net stop "Data Sharing Service"
+@REM net stop "Delivery Optimization"
+@REM net stop "Diagnostic Policy Service"
+@REM net stop "Microsoft Account Sign-in Assistant"
+@REM net stop "Microsoft Office Click-to-Run Service"
+@REM net stop "Update Orchestrator Service"
+@REM net stop "Windows Push Notifications System Service"
+@REM net stop "CNG Key Isolation"
+@REM net stop "Network Connection Broker"
 
 @REM Cannot be stopped.
 @REM net stop "Security Center"
@@ -57,9 +68,8 @@ net stop "MSI Live Update Service"
 @REM net stop "Radio Management Service"
 @REM net stop "Storage Service"
 
-net stop "AVCTP service"
+
 net stop "AllJoyn Router Service"
-net stop "AppX Deployment Service (AppXSVC)"
 net stop "Application Host Helper Service"
 net stop "BitLocker Drive Encryption Service"
 net stop "Bonjour Service"
@@ -74,11 +84,9 @@ net stop "Service Platform voor verbonden apparaten"
 
 net stop "Connected User Experiences and Telemetry"
 net stop "Credential Manager"
-net stop "Data Sharing Service"
+
 net stop "Data Usage"
-net stop "Delivery Optimization"
 net stop "Device Association Service"
-net stop "Diagnostic Policy Service"
 net stop "Display Enhancement Service"
 net stop "Display Policy Service"
 net stop "Distributed Link Tracking Client"
@@ -99,8 +107,6 @@ net stop "Intel(R) PROSet/Wireless Zero Configuration Service"
 net stop "Intel(R) Rapid Storage Technology"
 net stop "Internet Connection Sharing (ICS)"
 net stop "MSSQLSERVER"
-net stop "Microsoft Account Sign-in Assistant"
-net stop "Microsoft Office Click-to-Run Service"
 net stop "Microsoft Store Install Service"
 net stop "NVIDIA Telemetry Container"
 net stop "Network Connected Devices Auto-Setup"
@@ -123,14 +129,6 @@ net stop "SysMain"
 net stop "System Event Notification Service"
 net stop "TCP/IP NetBIOS Helper"
 net stop "Themes"
-net stop "Update Orchestrator Service"
-
-@REM EN name
-net stop "Web Account Manager"
-
-@REN NL name
-net stop "Webaccountbeheer"
-
 net stop "WebClient"
 net stop "Windows Backup"
 net stop "Windows Biometric Service"
@@ -138,18 +136,15 @@ net stop "Windows Error Reporting Service"
 net stop "Windows Image Acquisition (WIA)"
 net stop "Windows Modules Installer"
 net stop "Windows Presentation Foundation Font Cache 3.0.0.0"
-net stop "Windows Push Notifications System Service"
 net stop "Windows Time"
 net stop "Windows Update"
 net stop "World Wide Web Publishing Service"
 net stop "Xbox Live Auth Manager"
 
 @REM Services where other services depend on.
-net stop "CNG Key Isolation"
 net stop "Windows Process Activation Service"
 net stop "Web Account Manager"
 net stop "Function Discovery Provider Host"
-net stop "Network Connection Broker"
 
 @REM Wont stop otherwise?
 net stop "Intel(R) PROSet/Wireless Registry"
